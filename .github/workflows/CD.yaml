@@ -28,8 +28,5 @@ jobs:
           GOARCH: ${{matrix.goarch}}
           CGO_ENABLED: 0
         run: go build -o bin/algorun-${{matrix.goarch}}-${{matrix.goos}} *.go
-      - uses: go-semantic-release/action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       
       
