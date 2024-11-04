@@ -37,14 +37,15 @@ jobs:
       - build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@master
+      - uses: actions/download-artifact@v4
         with:
           pattern: algorun*
           path: ./bin
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
       - uses: go-semantic-release/action@v1
+        id: semver
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-    
+      - name: Upload release
+        if: steps.semver.outputs.version != ''
+        run: gh release upload ${{github.semver.outputs.version}} bin/*
       
