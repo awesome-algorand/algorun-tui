@@ -46,6 +46,7 @@ jobs:
         id: semver
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo ${{github.semver.outputs.version}}
       - name: Upload release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
