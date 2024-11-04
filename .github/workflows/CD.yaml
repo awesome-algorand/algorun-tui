@@ -28,5 +28,23 @@ jobs:
           GOARCH: ${{matrix.goarch}}
           CGO_ENABLED: 0
         run: go build -o bin/algorun-${{matrix.goarch}}-${{matrix.goos}} *.go
-      
+      - uses: actions/upload-artifact@master
+        with:
+          name: algorun-${{matrix.goarch}}-${{matrix.goos}}
+          path: bin/algorun-${{matrix.goarch}}-${{matrix.goos}}
+  release:
+    needs: 
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          pattern: algorun*
+          path: ./bin
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+      - uses: go-semantic-release/action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+    
       
