@@ -50,5 +50,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: steps.semver.outputs.version != ''
-        run: gh release upload v${{steps.semver.outputs.version}} bin/*
+        run: gh release upload v${{steps.semver.outputs.version}} bin/**/*
       
