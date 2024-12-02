@@ -62,7 +62,7 @@ func (m StatusViewModel) View() string {
 	} else {
 		size = m.TerminalWidth / 2
 	}
-	beginning := style.Blue.Render(" Latest Round: ") + strconv.Itoa(int(m.Data.Status.LastRound))
+	beginning := style.Blue.Render(" Latest Block: ") + strconv.Itoa(int(m.Data.Status.LastRound))
 	end := style.Yellow.Render(strings.ToUpper(m.Data.Status.State)) + " "
 	middle := strings.Repeat(" ", max(0, size-(lipgloss.Width(beginning)+lipgloss.Width(end)+2)))
 
