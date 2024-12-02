@@ -41,7 +41,7 @@ func Test_StatusViewRender(t *testing.T) {
 	teatest.WaitFor(
 		t, tm.Output(),
 		func(bts []byte) bool {
-			return bytes.Contains(bts, []byte("Latest Round: 1337"))
+			return bytes.Contains(bts, []byte("Latest Block: 1337"))
 		},
 		teatest.WithCheckInterval(time.Millisecond*100),
 		teatest.WithDuration(time.Second*3),
