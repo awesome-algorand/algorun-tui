@@ -21,11 +21,9 @@ You will only be able to generate participation keys after your node is in a `RU
 
 Press the `G` key to start generating participation keys.
 
-NodeKit will ask the account address that you will be participating in consensus:
+NodeKit will ask the account address that will be participating in consensus. Enter your account address and press `ENTER`.
 
 ![](/assets/nodekit-partkey-gen-1.png)
-
-Enter your account address and press ENTER
 
 ## Select participation key duration
 
