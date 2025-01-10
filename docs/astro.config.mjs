@@ -9,7 +9,9 @@ export default defineConfig({
     starlight({
       title: "NodeKit",
       logo: {
-        src: "./public/nodekit.png",
+        light: "./public/nodekit-light.png",
+        dark: "./public/nodekit-dark.png",
+        alt: "NodeKit for Algorand",
         replacesTitle: true,
       },
       social: {
@@ -30,6 +32,9 @@ export default defineConfig({
           autogenerate: { directory: "reference" },
         },
       ],
+      components: {
+        ThemeProvider: "./src/components/CustomThemeProvider.astro",
+      },
       customCss: ["./src/tailwind.css"],
     }),
     tailwind({ applyBaseStyles: true }),
