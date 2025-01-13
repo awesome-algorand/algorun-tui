@@ -75,7 +75,28 @@ When the process is done, the Fast Catchup status information will disappear and
 
 ![](/assets/nodekit-state-running.png)
 
-:::note
-**Did you encounted any errors?**
-Check out the [Troubleshooting: Installing and bootstrapping the Algorand node](/troubleshooting#bootstrapping-the-algorand-node) section.
-:::
+<details>
+  <summary>Troubleshooting: Fast-catchup</summary>
+  If the fast catchup process does not complete within 1-2 hours, check the following:
+
+  **Your hardware meets the requirements**
+
+  Check that your node meets the [hardware requirements](https://developer.algorand.org/docs/run-a-node/setup/install/#hardware-requirements) for a participation node.
+
+  **Nodekit is in FAST-CATCHUP state**
+
+  The colored status at the top of Nodekit should be in a yellow `FAST-CATCHUP` state:
+
+  ![](/assets/nodekit-state-fast-catchup.png)
+
+  If not, exit nodekit with `Q` and run `./nodekit catchup` to start catching up. Then run `./nodekit` again to enter the user interface.
+
+  After fast-catchup completes successfully, it is normal for a node to be in a `SYNCING` state for a few minutes:
+
+  ![](/assets/nodekit-state-syncing.png)
+
+  During this the `Latest Round` number should be increasing rapidly.
+
+  If there is no progress for a while, or the Latest Round value is smaller than `46000000` (46 million) then you should start fast-catchup again.
+
+</details>

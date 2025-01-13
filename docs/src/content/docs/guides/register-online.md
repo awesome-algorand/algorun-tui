@@ -15,9 +15,7 @@ After you press `R`, you will see a link that you can follow to sign your key re
 
 ![](/assets/nodekit-keyreg-online.png)
 
-On most terminals, you can hold down Ctrl and click the link, which will open it in your default browser.
-
-If this does not work, copy the link and paste it into your browser.
+On most terminals, you can hold down `Ctrl` and click the link, which will open it in your default browser. If this does not work, copy the link and paste it into your browser.
 
 You will be taken to the Lora Transaction Wizard, where you should see the key information pre-filled:
 
