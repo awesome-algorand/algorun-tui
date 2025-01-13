@@ -37,6 +37,14 @@ NodeKit will detect the key registration and take you back to the Key informatio
 
 ![](/assets/nodekit-keyreg-success.png)
 
-You can press `ESC` to leave the key information modal.
+You can press `ESC` twice to get back to the home screen.
 
-That's it! Your node is now participating in Algorand consensus. If your account balance is over 30,000 ALGO, it will accumulate rewards for each block it proposes on the Algorand network.
+To confirm that your account is online, review the `STATUS` of your account. Accounts with an `ONLINE` status are participating in consensus.
+
+That's it! If your account balance is over 30,000 ALGO, it will accumulate rewards for each block it proposes on the Algorand network.
+
+:::note
+The `Protocol Voting` label in the top right panel refers to the **consensus protocol upgrade process**, not your account participation.
+
+![](/assets/note-protocol-voting.png)
+:::
