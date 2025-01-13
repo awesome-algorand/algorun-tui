@@ -16,15 +16,6 @@ This section outlines **common errors encountered** during the "bootstrap" node 
 **If you are looking for the instructions instead, they are located [here](/guides/20-bootstrap).**
 :::
 
-### Asking for password
-
-The installer will ask for your user password during this process. This is required by your operating system in order to install new software.
-
-Enter your operating system user password when you see this prompt:
-
-```
-[sudo] password for user:
-```
 
 ### Fast catchup is taking too long to complete
 

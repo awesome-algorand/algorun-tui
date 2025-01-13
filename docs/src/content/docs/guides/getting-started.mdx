@@ -5,6 +5,8 @@ sidebar:
   order: 10
 ---
 
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 Welcome to NodeKit, your command-line one-stop-shop for Algorand node running.
 
 NodeKit can help you with:
@@ -16,29 +18,33 @@ NodeKit can help you with:
 
 To get started with NodeKit, copy-paste this command in your terminal:
 
+<Tabs syncKey="os">
+<TabItem label="Linux">
+
 ```bash
+wget -qO- https://nodekit.run/install.sh | bash
+```
+</TabItem>
+<TabItem label="macOS">
+
+```sh
 curl -fsSL https://nodekit.run/install.sh | bash
 ```
 
-<details><summary>Troubleshooting: Command 'curl' not found</summary>
-If you get an error about the `curl` command not being found, you need to install the `curl` package.
+</TabItem>
+</Tabs>
 
-On Ubuntu systems, you do this with:
+<details>
+  <summary>Troubleshooting: Command 'bash' not found</summary>
+  Some versions of Mac OS may not include the required `bash` executable that runs the installer.
 
-```bash
-sudo apt install -y curl
-```
-</details>
-<details><summary>Troubleshooting: Command 'bash' not found</summary>
-Some versions of Mac OS may not include the required `bash` executable that runs the installer.
+  If you get an error about `bash` not being available, please install bash on your system manually.
 
-If you get an error about `bash` not being available, please install bash on your system manually.
+  For Mac OS, a popular way to do this is to install [Homebrew](https://brew.sh/) and then install bash using:
 
-For Mac OS, a popular way to do this is to install [Homebrew](https://brew.sh/) and then install bash using:
-
-```bash
-brew install bash
-```
+  ```bash
+  brew install bash
+  ```
 </details>
 
 This will detect your operating system and download the appropriate NodeKit executable to your local directory.

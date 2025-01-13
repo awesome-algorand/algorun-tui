@@ -23,7 +23,7 @@ If there is none, it will ask if you want to start a node installation:
 >
 > It looks like you're running this for the first time. Would you like to install a node? (y/n)
 
-You can respond by pressing the `Y` or `N` keys of your keyboard, for `Yes` and `No` respectively.
+You can respond by pressing the `y` or `n` keys of your keyboard, for `Yes` and `No` respectively.
 
 ---
 
@@ -46,7 +46,11 @@ INFO Installing with apt-get
 [sudo] password for user:
 ```
 
-Your operating system requires this to allow NodeKit to install the Algorand node software. Enter your user password and press ENTER to proceed.
+<details><summary>Why is the installer asking for my password?</summary>
+The installer will ask for your user password during the node installation process.
+
+This is required by your operating system in order to install new software.
+</details>
 
 ## Installation
 
