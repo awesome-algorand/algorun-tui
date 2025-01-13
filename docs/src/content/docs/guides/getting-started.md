@@ -20,6 +20,19 @@ To get started with NodeKit, copy-paste this command in your terminal:
 curl -fsSL https://nodekit.run/install.sh | bash
 ```
 
+<details>
+<summary>Troubleshooting: Command 'curl' not found</summary>
+
+If you get an error about the `curl` command not being found, you need to install the `curl` package.
+
+On Ubuntu systems, you do this with:
+
+```bash
+sudo apt install -y curl
+```
+
+</details>
+
 This will detect your operating system and download the appropriate NodeKit executable to your local directory.
 
 It will then immediately start the bootstrap process to get your Algorand node up and running:
