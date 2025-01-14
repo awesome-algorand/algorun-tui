@@ -7,6 +7,8 @@ import (
 	"runtime"
 )
 
+var version = "dev"
+
 func init() {
 	// TODO: handle log files
 	// Log as JSON instead of the default ASCII formatter.
@@ -22,7 +24,7 @@ func init() {
 func main() {
 	// TODO: more performance tuning
 	runtime.GOMAXPROCS(1)
-	err := cmd.Execute()
+	err := cmd.Execute(version)
 	if err != nil {
 		return
 	}
